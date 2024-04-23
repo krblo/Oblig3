@@ -1,5 +1,6 @@
 
     public class Biletter {
+        private int id;
         private String film;
         private String antall;
         private String fornavn;
@@ -7,13 +8,22 @@
         private String tlf;
         private String epost;
 
-        public Biletter(String film, String antall, String fornavn, String etternavn, String tlf, String epost){
+        public Biletter(int id, String film, String antall, String fornavn, String etternavn, String tlf, String epost){
+            this.id = id;
             this.film = film;
             this.antall = antall;
             this.fornavn = fornavn;
             this.etternavn = etternavn;
             this.tlf = tlf;
             this.epost = epost;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
         }
 
         public String getFilm() {
