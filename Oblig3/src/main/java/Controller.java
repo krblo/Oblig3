@@ -14,8 +14,8 @@ public class Controller {
 
 
     @PostMapping("/lagreBilett")
-    public void lagreBilett(Biletter innBiletter) {
-        rep.lagreBilett(innBiletter);
+    public void lagreBilett(Biletter biletter) {
+        rep.lagreBilett(biletter);
     }
     @GetMapping({"/hentEnKunde"})
     public Biletter hentEnBilett(int id) {
