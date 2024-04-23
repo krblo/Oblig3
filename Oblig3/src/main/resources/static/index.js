@@ -3,9 +3,14 @@ $(function () {
 
 });
 
+$(function () {
+    hentAlle()
+});
+
+
 function hentAlle(){
     $.get("/hentAlle", function ( biletter) {
-        formaterData(biletter)
+        formaterData(biletter);
     })
 }
 function formaterData(biletter){

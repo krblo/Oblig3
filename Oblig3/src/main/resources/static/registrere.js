@@ -76,20 +76,9 @@ function  regKinoBilett() {
         $.post("/lagreBilett", ticket, function () {
             hentAlle();
         });
-        $("#film").val("");
-        $("#antall").val("");
-        $("#fornavn").val("");
-        $("#etternavn").val("");
-        $("#tlf").val("");
-        $("#epost").val("");
     }
-}
-function hentAlle() {
-    $.get("/hentAlle", function (data) {
-        formaterData(data);
-    });
-    window.location.href="/";
-}
+        window.location.href = "/";
+    }
 
 
 

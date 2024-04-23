@@ -13,7 +13,7 @@ $(function (){
 });
 
 function endreBilett(){
-    const bilett = {
+    const biletter = {
         id : $("#id").val(),
         film: $("#film").val(),
         antall: $("#antall").val(),
@@ -22,7 +22,7 @@ function endreBilett(){
         tlf: $("#tlf").val(),
         epost: $("#epost").val()
     }
-    $.post("/endreEnBilett",bilett,function () {
+    $.post("/endreEnBilett",biletter,function () {
         window.location.href = 'index.html'
     });
 }

@@ -3,7 +3,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
-
 @org.springframework.stereotype.Repository
 public class Repository {
     @Autowired
@@ -14,7 +13,7 @@ public class Repository {
         this.db.update(sql, new Object[]{biletter.getFilm(), biletter.getAntall(), biletter.getFornavn(), biletter.getEtternavn(), biletter.getTlf(), biletter.getEpost()});
     }
 
-    public List<Biletter> hentAlleBiletter() {
+    public List<Biletter> hentAlle() {
         String sql = "SELECT * FROM Biletter";
         List<Biletter> alleBiletter = this.db.query(sql, new BeanPropertyRowMapper(Biletter.class));
         return alleBiletter;

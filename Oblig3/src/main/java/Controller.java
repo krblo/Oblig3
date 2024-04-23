@@ -28,7 +28,7 @@ public class Controller {
     }
     @GetMapping("/hentAlle")
     public List<Biletter> hentAlle() {
-        return rep.hentAlleBiletter();
+        return rep.hentAlle();
     }
 
     @GetMapping({"/slettEnBilett"})
