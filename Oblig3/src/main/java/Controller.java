@@ -10,7 +10,7 @@ import java.util.List;
 public class Controller {
 
     @Autowired
-    private Repository rep;
+    private BilettRepo rep;
 
 
     @PostMapping("/lagreBilett")
