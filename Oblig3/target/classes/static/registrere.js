@@ -74,10 +74,9 @@ function  regKinoBilett() {
         };
 
         $.post("/lagre", biletter, function () {
-            hentAlle();
-
+            window.location.href = "/";
         });
-      /* window.location.href = "/";*/
+
     }
 
     }

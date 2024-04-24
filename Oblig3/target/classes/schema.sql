@@ -1,4 +1,4 @@
-CREATE TABLE biletter
+CREATE TABLE Biletter
 (
     id INTEGER AUTO_INCREMENT NOT NULL,
     film VARCHAR(255) NOT NULL,
@@ -9,3 +9,4 @@ CREATE TABLE biletter
     epost VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
+

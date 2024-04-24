@@ -1,5 +1,6 @@
+package com.example.oblig3;
 
-    public class Biletter {
+public class Biletter {
         private int id;
         private String film;
         private String antall;
@@ -17,6 +18,7 @@
             this.tlf = tlf;
             this.epost = epost;
         }
+        public Biletter(){}
 
         public int getId() {
             return id;

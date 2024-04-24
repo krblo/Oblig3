@@ -15,7 +15,7 @@ function formaterData(biletter){
     for (const b of biletter) {
         ut += "<tr><td>" + b.film + "</td><td>" + b.antall + "</td><td>" + b.fornavn + "</td>" +
             "<td>" + b.etternavn + "</td><td>" + b.tlf + "</td><td>" + b.epost + "</td>" +
-            "<td> <a class='btn btn-primary' href='endre.html?=id"+ b.id +"' >Endre</a></td>" +
+            "<td> <a class='btn btn-primary' href='endre.html?id="+ b.id +"' >Endre</a></td>" +
             "<td> <button class='btn btn-danger' onclick='slettEnBilett(" + b.id + ")'>Slett</button></td>" +
             "</tr>";
     }
@@ -23,7 +23,7 @@ function formaterData(biletter){
     $("#billetListe").html(ut);
 }
 function slettEnBilett(id){
-    const url = "/slettEnKunde?id="+id;
+    const url = "/slettEnBilett?id="+id;
     $.get(url, function () {
         window.location.href = "/"
     })

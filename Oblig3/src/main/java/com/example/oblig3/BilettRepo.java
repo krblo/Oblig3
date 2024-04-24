@@ -1,3 +1,5 @@
+package com.example.oblig3;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,7 +13,7 @@ public class BilettRepo {
 
         public void lagreBilett(Biletter biletter) {
             String sql = "INSERT INTO Biletter (film,antall,fornavn,etternavn,tlf,epost) VALUES(?,?,?,?,?,?)";
-            this.db.update(sql, new Object[]{biletter.getFilm(), biletter.getAntall(), biletter.getFornavn(), biletter.getEtternavn(), biletter.getTlf(), biletter.getEpost()});
+            this.db.update(sql, biletter.getFilm(), biletter.getAntall(), biletter.getFornavn(), biletter.getEtternavn(), biletter.getTlf(), biletter.getEpost());
         }
 
         public List<Biletter> hentAlleBiletter() {
