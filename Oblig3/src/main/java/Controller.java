@@ -1,7 +1,7 @@
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class Controller {
     private BilettRepo rep;
 
 
-    @PostMapping("/lagreBilett")
+    @PostMapping("/lagre")
     public void lagreBilett(Biletter biletter) {
         rep.lagreBilett(biletter);
     }
@@ -27,8 +27,8 @@ public class Controller {
         this.rep.endreEnBilett(biletter);
     }
     @GetMapping("/hentAlle")
-    public List<Biletter> hentAlle() {
-        return rep.hentAlle();
+    public List<Biletter> hentAlleBiletter() {
+        return rep.hentAlleBiletter();
     }
 
     @GetMapping({"/slettEnBilett"})

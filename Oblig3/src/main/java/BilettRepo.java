@@ -6,19 +6,15 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public class BilettRepo {
-
-
-
-
         @Autowired
         private JdbcTemplate db;
 
         public void lagreBilett(Biletter biletter) {
-            String sql = "INSERT INTO Biletter (film,antall,fornavn,etternavn,tlf,epost) VALUES(?,?,?,?,?,?,)";
+            String sql = "INSERT INTO Biletter (film,antall,fornavn,etternavn,tlf,epost) VALUES(?,?,?,?,?,?)";
             this.db.update(sql, new Object[]{biletter.getFilm(), biletter.getAntall(), biletter.getFornavn(), biletter.getEtternavn(), biletter.getTlf(), biletter.getEpost()});
         }
 
-        public List<Biletter> hentAlle() {
+        public List<Biletter> hentAlleBiletter() {
             String sql = "SELECT * FROM Biletter";
             List<Biletter> alleBiletter = this.db.query(sql, new BeanPropertyRowMapper(Biletter.class));
             return alleBiletter;
@@ -32,7 +28,7 @@ public class BilettRepo {
         }
 
         public void endreEnBilett(Biletter biletter) {
-            String sql = "UPDATE Biletter SET film=?,antall=?, fornavn=?, etternavn=?, tlf=?, epost=?, where id=?";
+            String sql = "UPDATE Biletter SET film=?,antall=?, fornavn=?, etternavn=?, tlf=?, epost=? where id=?";
             this.db.update(sql, new Object[]{biletter.getFilm(), biletter.getAntall(), biletter.getFornavn(), biletter.getEtternavn(), biletter.getTlf(), biletter.getEpost(), biletter.getId()});
         }
 

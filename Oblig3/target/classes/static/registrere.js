@@ -64,7 +64,7 @@ function  regKinoBilett() {
     const epost = $("#epost").val();
 
     if (validering(film, antall, fornavn, etternavn, tlf, epost)) {
-        const ticket = {
+        const biletter = {
             film: film,
             antall: antall,
             fornavn: fornavn,
@@ -73,11 +73,13 @@ function  regKinoBilett() {
             epost: epost,
         };
 
-        $.post("/lagreBilett", ticket, function () {
+        $.post("/lagre", biletter, function () {
             hentAlle();
+
         });
+      /* window.location.href = "/";*/
     }
-        window.location.href = "/";
+
     }
 
 

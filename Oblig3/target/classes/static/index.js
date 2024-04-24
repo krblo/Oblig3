@@ -1,4 +1,6 @@
-
+$(function () {
+    hentAlle()
+});
 
 
 function hentAlle(){
@@ -21,7 +23,7 @@ function formaterData(biletter){
     $("#billetListe").html(ut);
 }
 function slettEnBilett(id){
-    const url = "/slettEnKunde?=id"+id;
+    const url = "/slettEnKunde?id="+id;
     $.get(url, function () {
         window.location.href = "/"
     })
