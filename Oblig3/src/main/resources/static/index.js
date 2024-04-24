@@ -1,11 +1,4 @@
-$(function () {
-    hentAlle();
 
-});
-
-$(function () {
-    hentAlle()
-});
 
 
 function hentAlle(){
